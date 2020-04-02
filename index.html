@@ -11,8 +11,9 @@
      rel="stylesheet"
      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-     crossorigin="anonymous"
+     crossorigin="anonymous" 
    />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
      <title>Weather</title>
 </head>
 
@@ -22,11 +23,11 @@
         <h1 class="text-center" class="jumbotron"> Weather Dashboard</h1>
     </div>
 
-    <div class="container mycontainer" >
+    <div class="container " >
        <div  class="row">
            <div class="col-4">
                 <div class="left-content">
-                    <h5>Search for a City:</h5>
+                    <h6>Search for a City:</h6>
                     <input class="float-left" type="text">
                     <button type="button"  class="btn btn-primary fab fa-searchengin"></button> 
             
@@ -36,14 +37,53 @@
 
            <div class="col-8">
                 <div class="row">
-                    <div class="padding-5px">
-                        <h3> City </h3>
+                    <div class="city-display">
+                        <h3 id="cityname"> City </h3>
+                    </br>
+                        <p id="1temp">  temperature: </p>
+                        <p id="1hum">Humidity</p>
+                        <p id="1wind">Windspeed</p>
+                        
                     </div>
                     
                 </div>
 
-                <div class="row">
+                <div class="row container">
+                    <div class="container">
+                        <div class="row">
+                            <h5>4-Day Forecast</h5>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 days">
+                                <p id="2date">Date</p>
+                                <p id="2icon"> </p>
+                                <p id="2temp">Temp</p>
+                                <p id="2Hum">Humidity</p>
+                            </div>
+                            <div class="col-3 days">
+                                <p id="3date">Date</p>
+                                <p id="3icon"> </p>
+                                <p id="3temp">Temp</p>
+                                <p id="3Hum">Humidity</p>
+                            </div>
+                            <div class="col-3 days">
+                                <p id="3date">Date</p>
+                                <p id="3icon"> </p>
+                                <p id="3temp">Temp</p>
+                                <p id="3Hum">Humidity</p>
+                            </div>
+                            <div class="col-3 days">
+                                <p id="3date">Date</p>
+                                <p id="3icon"> </p>
+                                <p id="3temp">Temp</p>
+                                <p id="3Hum">Humidity</p>
+                            </div>
+                        </div>
+                    </div>
                     
+                    
+
+
                 </div>
             </div>
        </div>
