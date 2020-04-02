@@ -21,13 +21,15 @@ console.log(queryURL)
         document.getElementById("1wind").innerHTML = "Windspeed: " + todayswindspeed
         document.getElementById("cityname").innerHTML = location
 
-        for(var i=0;i<4;i++){
-        var todaystemp = (response.list[i*8].main.temp) - 273.15
-        var todayshumidity = (response.list[i*8].main.humidity)
-        var todayswindspeed = (response.list[i*8].wind.speed)
-
-        document.getElementById(i+"temp").innerHTML = "Temperate: "+ Math.round(todaystemp)+" Degrees Celcius"
-        document.getElementById(i+"hum").innerHTML = "Humidity: "+ todayshumidity
+        for(var i=2;i<6;i++){
+        var todaystemp = (response.list[i*8-1].main.temp) - 273.15
+        var todayshumidity = (response.list[i*8-1].main.humidity)
+        var todayswindspeed = (response.list[i*8-1].wind.speed)
+        var date = (response.list[i*8-1].dt_txt)
+        
+        document.getElementById(i+"temp").innerHTML = "Temp: "+ Math.round(todaystemp)+" Degrees"
+        document.getElementById(i+"Hum").innerHTML = "Humidity: "+ todayshumidity
+        document.getElementById(i+"date").innerHTML = "Date: "+ date
         }
 
       })
